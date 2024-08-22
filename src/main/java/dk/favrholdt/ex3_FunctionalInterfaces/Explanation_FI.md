@@ -1,4 +1,4 @@
-## EXPLANATION OF FUNCTIONAL INTERFACES
+## 3.1 EXPLANATION OF FUNCTIONAL INTERFACES
     
 ### What is a functional interface?
 A functional interface is an interface that has exactly one abstract method. It can have multiple default methods or static methods. It can also have methods from the Object class (like equals() and hashCode()).
