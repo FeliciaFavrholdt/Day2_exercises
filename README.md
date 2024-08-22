@@ -1,16 +1,16 @@
 ### Day2_exercises
 
-* [Lambda Expressions](/src/main/java/com/lambda_expressions)
+* [Lambda Expressions](/src/develop/java/com/lambda_expressions)
 
-* [Functional Programming](/src/main/java/com/functional_programming)
+* [Functional Programming](/src/develop/java/com/functional_programming)
 
-* [Functional Interfaces](/src/main/java/com/functional_interfaces)
+* [Functional Interfaces](/src/develop/java/com/functional_interfaces)
 
-* [Generics](/src/main/java/com/generics)
+* [Generics](/src/develop/java/com/generics)
 
-* [Method References](/src/main/java/com/method_references)
+* [Method References](/src/develop/java/com/method_references)
 
-* [Bonus exercise](/src/main/java/com/bonus_exercise)
+* [Bonus exercise](/src/develop/java/com/bonus_exercise)
 
 Code is written in Java 8.
 
