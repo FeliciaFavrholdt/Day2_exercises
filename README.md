@@ -1,16 +1,16 @@
 ### Day2_exercises
 
-* [Lambda Expressions](/src/develop/java/com/lambda_expressions)
+* [Lambda Expressions](src/main/java/dk/favrholdt/ex1_LambdaExpressions)
 
-* [Functional Programming](/src/develop/java/com/functional_programming)
+* [Functional Programming](src/main/java/dk/favrholdt/ex2_FunctionalProgramming)
 
-* [Functional Interfaces](/src/develop/java/com/functional_interfaces)
+* [Functional Interfaces](src/main/java/dk/favrholdt/ex3_FunctionalInterfaces)
 
-* [Generics](/src/develop/java/com/generics)
+* [Generics](src/main/java/dk/favrholdt/ex4_Generics)
 
-* [Method References](/src/develop/java/com/method_references)
+* [Method References](src/main/java/dk/favrholdt/ex5_MethodReferences)
 
-* [Bonus exercise](/src/develop/java/com/bonus_exercise)
+* [Bonus exercise](src/main/java/dk/favrholdt/ex10_BonusExercise)
 
 Code is written in Java 8.
 
