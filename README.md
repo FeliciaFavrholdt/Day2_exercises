@@ -12,7 +12,7 @@
 
 * [Bonus exercise](src/main/java/dk/favrholdt/ex10_BonusExercise)
 
-Code is written in Java 8.
 
-by Felicia Favrholdt **|**
+
+Code written by Felicia Favrholdt **|**
 Datamatiker 3. semester E24 
