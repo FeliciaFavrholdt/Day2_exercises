@@ -1,30 +1,44 @@
 package dk.favrholdt.ex4_Generics;
 
 import java.io.*;
-import java.util.UUID;
 
 public class FileStorage<T> implements DataStorage<T> {
 
+    private final String filename;
+
+    public FileStorage(String filename) {
+        this.filename = filename;
+    }
+
     @Override
     public String store(T data) {
-        String filename = UUID.randomUUID().toString() + "filestorage.dat";
-        try (ObjectOutputStream outputStream = new ObjectOutputStream(new FileOutputStream(filename))) {
-            outputStream.writeObject(data);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        saveDataToFile(data);
         return filename;
     }
 
     @Override
-    @SuppressWarnings("unchecked")
     public T retrieve(String source) {
-        T data = null;
-        try (ObjectInputStream inputStream = new ObjectInputStream(new FileInputStream(source))) {
-            data = (T) inputStream.readObject();
+        return loadObjectFromFile(source);
+    }
+
+    // Save object to file
+    public void saveDataToFile(T data) {
+        try (final FileOutputStream fileOutputStream = new FileOutputStream(filename);
+             final ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream)) {
+            objectOutputStream.writeObject(data);
+            objectOutputStream.flush();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public T loadObjectFromFile(String fileName) {
+        try (final FileInputStream fileInputStream = new FileInputStream(fileName);
+             final ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream)) {
+            return (T) objectInputStream.readObject();
         } catch (IOException | ClassNotFoundException e) {
             e.printStackTrace();
         }
-        return data;
+        return null;
     }
 }

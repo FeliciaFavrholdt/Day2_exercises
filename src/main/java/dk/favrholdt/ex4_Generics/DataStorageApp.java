@@ -1,15 +1,23 @@
 package dk.favrholdt.ex4_Generics;
 
+import java.time.LocalDate;
+
 public class DataStorageApp {
     public static void main(String[] args) {
+
         DataStorage<String> memoryStorage = new MemoryStorage<>();
-        memoryStorage.store("Hello, world!");
-        String retrievedString = memoryStorage.retrieve(null);
+        memoryStorage.store("Some data");
+        String retrievedString = memoryStorage.retrieve("Some data");
+        System.out.println(retrievedString);
 
-        DataStorage<Employee> fileStorage = new FileStorage<>();
-        String filename = fileStorage.store(new Employee("Mads", 22));
-        Employee retrievedInt = fileStorage.retrieve(filename);
+        FileStorage<Employee> fileStorage = new FileStorage<>("employeeData.txt");
+        fileStorage.store(new Employee("Mads", 22, LocalDate.now()));
+        Employee retrieved = fileStorage.retrieve("employeeData.txt");
+        System.out.println(retrieved);
 
-        // Create and demonstrate DatabaseStorage
+        /*DatabaseStorage<Employee> databaseStorage = new DatabaseStorage<>("database");
+        databaseStorage.store(new Employee("Mads", 22, LocalDate.now()));
+        Employee retrievedFromDatabase = databaseStorage.retrieve("Mads");
+        System.out.println(retrievedFromDatabase);*/
     }
 }
