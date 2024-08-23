@@ -1,4 +1,4 @@
-package dk.favrholdt.ex5_MethodReferences;
+package dk.favrholdt.ex5_MethodReferences.examples;
 
 import java.util.Arrays;
 
